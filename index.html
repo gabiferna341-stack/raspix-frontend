@@ -1,0 +1,131 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #242424;
+  --color-bg-light: #ffffff;
+  --color-text: #ffffff;
+  --color-text-dark: #213547;
+  --color-primary: #646cff;
+  --color-primary-hover: #535bf2;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Botões */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--color-primary);
+  background-color: #333;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  body {
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+  }
+
+  nav {
+    background-color: #f1f1f1;
+  }
+
+  nav h2 {
+    color: var(--color-primary-hover);
+  }
+
+  nav ul li a {
+    color: var(--color-text-dark);
+  }
+
+  footer {
+    background-color: #ddd;
+    color: #333;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: var(--color-text-dark);
+  }
+}
